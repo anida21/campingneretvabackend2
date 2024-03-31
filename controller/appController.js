@@ -104,7 +104,7 @@ const sendMessage = async (to, formData) => {
 
     let response = {
       body: {
-        name: 'Camping Neretva message',
+        name: 'Camping Neretva',
         intro: `This is a message: `,
         table: {
           data: [
