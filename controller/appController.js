@@ -34,8 +34,8 @@ const sendEmail = async (to, formData) => {
 
     let response = {
       body: {
-        name: 'Camping Neretva Reservation',
-        intro: `Here are the details:`,
+        name: 'Camping Neretva',
+        intro: `Here are the reservation details:`,
         table: {
           data: [
             { item: 'Name', description: Name },
@@ -105,7 +105,7 @@ const sendMessage = async (to, formData) => {
     let response = {
       body: {
         name: 'Camping Neretva message',
-        intro: `Message`,
+        intro: `This is a message: `,
         table: {
           data: [
             { item: 'Name', description: Name },
@@ -113,7 +113,7 @@ const sendMessage = async (to, formData) => {
             { item: 'Message', description: Message || 'N/A' }
           ],
         },
-        outro: '',
+        outro: 'Please contact customer in next 24 hours for this message.',
       },
     };
 
@@ -122,7 +122,7 @@ const sendMessage = async (to, formData) => {
     let message = {
       from: EMAIL,
       to: to,
-      subject: 'Camping Message Details',
+      subject: 'Camping Neretva Message Details',
       html: mail,
     };
 
